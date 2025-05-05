@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ui.PaiementViewController" alignment="CENTER" spacing="15"
+      style="-fx-padding: 20;">
+
+    <Label text="Paiement" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Montant:" minWidth="100"/>
+        <TextField fx:id="montantField" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Date:" minWidth="100"/>
+        <DatePicker fx:id="datePicker" prefWidth="200" editable="false" disable="true"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Méthode:" minWidth="100"/>
+        <ComboBox fx:id="methodeComboBox" prefWidth="200"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="ID Étudiant:" minWidth="100"/>
+        <TextField fx:id="idEtudiantField" prefWidth="200"/>
+    </HBox>
+
+    <TextField fx:id="idField" visible="false"/>
+
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="💾 Enregistrer" onAction="#onAddClicked"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        <Button text="🔙 Retour" onAction="#onRefreshClicked"
+                style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold;"/>
+    </HBox>
+
+</VBox>

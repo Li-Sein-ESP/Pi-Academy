@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.PaiementViewController">
+
+    <!-- Top buttons -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10 0 10 20;">
+            <Button fx:id="refreshButton" text="🔄 Rafraîchir" onAction="#onRefreshClicked"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button fx:id="addButton" text="➕ Ajouter" onAction="#onAddClicked"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button fx:id="updateButton" text="✏️ Modifier" onAction="#onUpdateClicked"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Button fx:id="deleteButton" text="🗑️ Supprimer" onAction="#onDeleteClicked"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- Center table -->
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <Label fx:id="dateValueLabel" text="Date"
+                   style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <TableView fx:id="paiementsTable" maxWidth="700">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="montantColumn" text="Montant" prefWidth="100"/>
+                    <TableColumn fx:id="dateColumn" text="Date" prefWidth="150"/>
+                    <TableColumn fx:id="methodeColumn" text="Méthode" prefWidth="100"/>
+                    <TableColumn fx:id="idEtudiantColumn" text="ID Étudiant" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
