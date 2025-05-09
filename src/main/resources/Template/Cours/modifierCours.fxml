@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.pi_dev.Controllers.ModifierCours"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Sidebar identique à template.fxml -->
+    <VBox fx:id="ap" layoutY="6.0" prefHeight="526.0" prefWidth="240.0" style="-fx-background-color: #8ECAE6;">
+        <children>
+            <Button fx:id="homeButton" mnemonicParsing="false" onAction="#retourHome" prefHeight="62.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Utilisateurs" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="244.0" style="-fx-background-color: #219EBC; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Cours " textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="127.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Salles " textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="244.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Événements" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="244.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Paiements" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Performances " textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Ressources " textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="419.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Déconnexion" textFill="WHITE">
+                <font>
+                    <Font size="15.0" />
+                </font>
+            </Button>
+        </children>
+    </VBox>
+
+    <!-- Contenu principal -->
+    <AnchorPane layoutX="250.0" layoutY="0.0" prefHeight="650.0" prefWidth="650.0">
+
+        <!-- En-tête -->
+        <HBox layoutX="0.0" layoutY="0.0" prefHeight="80.0" prefWidth="650.0" style="-fx-background-color: #219EBC; -fx-padding: 0 15 0 15;">
+            <Label alignment="CENTER" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Gestion des Cours et Sessions" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        </HBox>
+
+        <!-- Zone de contenu -->
+        <VBox layoutX="0.0" layoutY="80.0" prefHeight="570.0" prefWidth="650.0" spacing="20" style="-fx-padding: 20;">
+
+            <!-- Boutons Affichage -->
+            <HBox spacing="10">
+                <Button fx:id="afficherSessionsBtn" onAction="#afficherTableSessions" style="-fx-background-color: #219EBC; -fx-text-fill: white; -fx-font-weight: bold;" text="Afficher Sessions" />
+                <Button fx:id="afficherCoursBtn" onAction="#afficherTableCours" style="-fx-background-color: #219EBC; -fx-text-fill: white; -fx-font-weight: bold;" text="Afficher Cours" />
+                <Button fx:id="ajouterCoursBtn" onAction="#handleAjouterCours" style="-fx-background-color: #219EBC; -fx-text-fill: white; -fx-font-weight: bold;" text="Ajouter Cours" />
+                <Button fx:id="supprimerCoursBtn" onAction="#handleSupprimerCours" style="-fx-background-color: #219EBC; -fx-text-fill: white; -fx-font-weight: bold;" text="Supprimer Cours" />
+            </HBox>
+
+            <!-- Formulaire -->
+            <VBox spacing="10">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+
+                <ComboBox fx:id="critereComboBox" promptText="Choisir critère de recherche" />
+                <TextField fx:id="valeurRechercheField" promptText="Entrez ID ou nom" visible="false" />
+                <Button fx:id="btnRechercher" onAction="#rechercherCours" text="Rechercher" visible="false" />
+
+                <Label text="Nom" />
+                <TextField fx:id="nomField" alignment="CENTER" promptText="*****" />
+
+                <Label text="Description" />
+                <TextField fx:id="descriptionField" />
+
+                <Label text="Prix" />
+                <TextField fx:id="prixField" />
+
+                <Label text="Durée (heures)" />
+                <Spinner fx:id="dureeSpinner" prefHeight="26.0" prefWidth="460.0" />
+
+                <Label text="Catégorie" />
+                <ComboBox fx:id="categorieComboBox" prefHeight="26.0" prefWidth="457.0" />
+            </VBox>
+
+            <!-- Bouton Modifier -->
+            <Button fx:id="modifierButton" prefHeight="54.0" prefWidth="451.0"
+                    style="-fx-font-size:16px; -fx-font-weight:bold; -fx-background-color: #219EBC; -fx-text-fill:white;"
+                    text="Modifier Cours" onAction="#modifierCours" />
+        </VBox>
+    </AnchorPane>
+</AnchorPane>

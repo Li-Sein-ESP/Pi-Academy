@@ -5,52 +5,79 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="752.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="525.0" prefWidth="752.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.pi_dev.Controllers.MainController">
    <left>
       <VBox fx:id="ap" prefHeight="526.0" prefWidth="240.0" style="-fx-background-color: #8ECAE6;" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Home" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Home" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Utilisateurs" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="58.0" prefWidth="240.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Utilisateurs" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="244.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Cours " textFill="WHITE">
+            <Button fx:id="gestionCoursButton" layoutX="10.0" layoutY="68.0" mnemonicParsing="false"
+                    onAction="#handleGestionCours" prefHeight="58.0" prefWidth="244.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Cours " textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="127.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Salles " textFill="WHITE">
+            <Button layoutX="10.0" layoutY="127.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="242.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Salles " textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="244.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Événements" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="244.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Événements" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="244.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Paiements" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="244.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="242.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Paiements" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="302.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Performances " textFill="WHITE">
+            <Button layoutX="10.0" layoutY="302.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="240.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Performances " textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="242.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Gestion des Ressources " textFill="WHITE">
+            <Button layoutX="10.0" layoutY="360.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="242.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Gestion des Ressources " textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="419.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="238.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" text="Déconnexion" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="419.0" mnemonicParsing="false"
+                    prefHeight="58.0" prefWidth="238.0"
+                    style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;"
+                    text="Déconnexion" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>

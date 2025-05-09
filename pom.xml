@@ -16,7 +16,7 @@
     </properties>
 
     <dependencies>
-        <!-- Dépendances JavaFX -->
+
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -28,7 +28,6 @@
             <version>${javafx.version}</version>
         </dependency>
 
-        <!-- Suppression des doublons et dépendances inutiles -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
